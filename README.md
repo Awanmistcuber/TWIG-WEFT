@@ -1,6 +1,8 @@
-# TWIG-WEFTUser
+# TWIG-WEFT
 In the world of fashion design, creativity knows no bounds, but unfortunately, inclusivity sometimes takes a back seat. Traditional design tools often overlook the diverse needs of designers, and for those with color blindness, the challenge is even more pronounced. Recognizing this gap, Twig&Weft steps forward to bridge the divide. Many talented designers with color blindness find it challenging to accurately perceive and choose colors for their creations. This not only hinders their creative expression but also limits the industry's diversity.
+![Twig   weft](https://github.com/Awanmistcuber/TWIG-WEFT/assets/111055510/e75f4230-c5ea-4d4a-9c84-935ac610eed2)
 Introducing Twig&Wheft, a revolutionary platform specifically crafted for fashion designers who face the challenges of color blindness. This innovative platform goes beyond conventional design tools, offering a comprehensive solution to empower designers with unique capabilities.
+
 
 Color Detection through Video:
 Twig&Weft understands the significance of color in fashion, and that's why it features an advanced color detection system. Designers with color blindness can capture colors through a simple video, allowing the platform to identify and label each shade accurately. This feature ensures that designers can make informed color choices, eliminating any potential discrepancies in their creations.
