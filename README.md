@@ -3,9 +3,14 @@ In the world of fashion design, creativity knows no bounds, but unfortunately, i
 ![Twig   weft](https://github.com/Awanmistcuber/TWIG-WEFT/assets/111055510/e75f4230-c5ea-4d4a-9c84-935ac610eed2)
 Introducing Twig&Wheft, a revolutionary platform specifically crafted for fashion designers who face the challenges of color blindness. This innovative platform goes beyond conventional design tools, offering a comprehensive solution to empower designers with unique capabilities.
 
+**Twig&Weft provides Color Detection System , AI tools and Creater Mode.**
 
 Color Detection through Video:
 Twig&Weft understands the significance of color in fashion, and that's why it features an advanced color detection system. Designers with color blindness can capture colors through a simple video, allowing the platform to identify and label each shade accurately. This feature ensures that designers can make informed color choices, eliminating any potential discrepancies in their creations.
+
+
+https://github.com/Awanmistcuber/TWIG-WEFT/assets/111055510/615cdf20-3dec-4bc9-ac72-3c4737c3d701
+
 
 AI-Powered Design Tools:
 At the heart of Twig&Weft lies a powerful suite of AI tools tailored for fashion design. The platform utilizes cutting-edge artificial intelligence to suggest color palettes, recommend complementary hues, and even propose design elements based on current trends. This not only streamlines the design process but also ensures that designers, regardless of color vision limitations, can create visually stunning and harmonious fashion pieces.
