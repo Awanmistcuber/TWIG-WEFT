@@ -1,0 +1,221 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Control</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    #cameraContainer {
+        width: 300px;
+        height: 300px;
+        border: 1px solid black;
+        position: relative;
+    }
+
+    #cameraScreen {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    #controlButtons {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+    }
+
+    .button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+
+<div id="cameraContainer">
+    <video id="cameraScreen" autoplay playsinline></video>
+</div>
+
+<div id="controlButtons">
+    <button class="button" onclick="openCamera()">Open Camera</button>
+    <button class="button" onclick="closeCamera()">Close Camera</button>
+</div>
+
+<script>
+let stream = null;
+
+function openCamera() {
+    // Request access to the camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(s) {
+        // Access granted, show the camera feed
+        stream = s;
+        var video = document.createElement('video');
+        video.srcObject = stream;
+        video.autoplay = true;
+        document.body.appendChild(video);
+    })
+    .catch(function(error) {
+        // Handle error
+        console.error('Error accessing camera:', error);
+    });
+}
+
+function closeCamera() {
+    if (stream) {
+        // Stop the camera stream
+        let tracks = stream.getTracks();
+        tracks.forEach(function(track) {
+            track.stop();
+        });
+        // Remove video element
+        document.querySelector('video').remove();
+    }
+}
+</script>
+
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Camera Control</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+    }
+    
+    #cameraContainer {
+        width: 500px;
+        height: 500px;
+        border: 3px solid black;
+        position: relative;
+        margin-bottom: 30px;
+    }
+
+    #cameraOutput {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    #controlButtons {
+        display: flex;
+        justify-content: center;
+        position: relative;
+        margin-top: 30px; 
+    }
+
+    .button {
+        padding: 10px 20px;
+        margin: 0 10px;
+        cursor: pointer;
+        background-color: #007bff;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        outline: none;
+    }
+
+    .button:hover, #coordinatesBox:hover {
+        background-color: #0056b3;
+    }
+    
+    #coordinatesBox {
+            padding: 10px 20px;
+            margin: 0 10px;
+            width: 300px;
+            height: 30px;
+            border-radius: 10px;
+            background-color: #007bff;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+</style>
+</head>
+<body>
+
+<div id="cameraContainer">
+    <video id="cameraOutput" autoplay playsinline></video>
+</div>
+
+<div id="controlButtons">
+    <button class="button" onclick="openCamera()">Open Camera</button>
+    <button class="button" onclick="closeCamera()">Close Camera</button>
+</div>
+
+<div id="coordinatesBox">Coordinates: </div>
+
+<script>
+let videoElement = document.getElementById('cameraOutput');;
+let coordinatesBox = document.getElementById('coordinatesBox');
+
+function openCamera() {
+    // Request access to the camera
+    navigator.mediaDevices.getUserMedia({ video: true })
+    .then(function(stream) {
+        // Access granted, show the camera feed
+        videoElement = document.getElementById('cameraOutput');
+        videoElement.srcObject = stream;
+        videoElement.autoplay = true;
+    })
+    .catch(function(error) {
+        // Handle error
+        console.error('Error accessing camera:', error);
+    });
+}
+
+function closeCamera() {
+    if (videoElement && videoElement.srcObject) {
+        let tracks = videoElement.srcObject.getTracks();
+        tracks.forEach(track => track.stop());
+        videoElement.srcObject = null;
+    }
+}
+
+// Add double click event listener to the camera screen
+videoElement.addEventListener('dblclick', function(event) {
+    // Get mouse coordinates relative to the camera screen
+    let rect = videoElement.getBoundingClientRect();
+    let x = event.clientX - rect.left;
+    let y = event.clientY - rect.top;
+
+    // Display the coordinates
+    // alert('Double clicked at coordinates (x, y): (' + x + ', ' + y + ')');
+
+    coordinatesBox.textContent = 'Coordinates: x = (' + x + '), y = (' + y + ')';
+
+});
+</script>
+
+</body>
+</html>
