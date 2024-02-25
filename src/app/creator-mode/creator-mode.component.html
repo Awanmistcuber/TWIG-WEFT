@@ -1,0 +1,18 @@
+<div>
+    <canvas
+      #canvas width="490" height="490" 
+      class="paint-canvas"
+      (mousedown)="startPainting($event)"
+      (mouseup)="stopPainting()"
+      (mousemove)="paint($event)"
+      (mouseleave)="stopPainting()"
+      (wheel)="zoom($event)"
+    ></canvas>
+    <div class="tools">
+      <button (click)="setTool('brush')">Brush</button>
+      <button (click)="setTool('eraser')">Eraser</button>
+      <button (click)="zoomIn()">Zoom In</button>
+      <button (click)="zoomOut()">Zoom Out</button>
+    </div>
+  </div>
+  

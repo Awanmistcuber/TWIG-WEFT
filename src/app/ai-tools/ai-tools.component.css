@@ -1,0 +1,35 @@
+.ai-tool-container {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .service-box {
+    display: inline-block;
+    margin: 10px;
+    padding: 15px;
+    background-color: #0f011b;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+  }
+  
+  .service-box:hover {
+    background-color: #cfeafc;
+    transform: scale(1.05);
+  }
+  
+  .service-box img {
+    width: 200px;
+    height: 150px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+  }
+  
+  .info-text {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  

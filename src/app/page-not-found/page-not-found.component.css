@@ -1,0 +1,9 @@
+.pagenotfound{
+    font-size: 80px;
+}
+.pagenotfound:hover{
+    color: azure;
+}
+.homey:hover{
+    color: palevioletred;
+}

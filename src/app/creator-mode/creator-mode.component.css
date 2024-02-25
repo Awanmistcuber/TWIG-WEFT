@@ -1,0 +1,13 @@
+/* Import Google font - Poppins */
+.paint-canvas {
+    border: 1px solid #000;
+    cursor: crosshair;
+  }
+  
+  .tools {
+    margin-top: 10px;
+  }
+  
+  button {
+    margin-right: 10px;
+  }

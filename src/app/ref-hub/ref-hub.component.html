@@ -1,0 +1,21 @@
+<!-- refhub.component.html -->
+<section class="text-gray-400 body-font bg-gray-900"style="height:2000px;">
+  <div>
+      <input type="file" (change)="onFileChange($event)">
+    </div>
+    <div
+      #canvas
+      class="canvas"
+      (drop)="onCanvasDrop($event)"
+      (dragover)="onCanvasDragOver($event)"
+    >
+      <div
+        *ngFor="let image of uploadedImages"
+        class="image"
+        [draggable]="true"
+        (dragstart)="onImageDragStart(image)"
+      >
+        <img [src]="image.url" alt="Uploaded Image">
+      </div>
+    </div>
+</section> 
